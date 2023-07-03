@@ -2,37 +2,42 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: rgb(23, 23, 23);
+}
+.list-item::before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 4px;
+  opacity: 0;
+  background: linear-gradient(to right, #0060a0, #01436f);
+  transition: all 0.8s;
+}
+.list-item::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  right: 0;
+  width: 0;
+  height: 4px;
+  opacity: 0;
+  background: linear-gradient(to left, #0060a0, #01436f);
+  transition: all 0.8s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.list-item:hover::before {
+  width: 100%;
+  opacity: 1;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.list-item:hover::after {
+  width: 100%;
+  opacity: 1;
 }
