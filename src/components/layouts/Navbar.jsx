@@ -13,7 +13,7 @@ function Navbar() {
     <>
       <nav className="flex justify-between items-center py-4 m-2">
         <div className="flex items-center">
-          <h1 className="text-white text-4xl font-bold">
+          <h1 className="text-white text-3xl font-bold">
             <Link to="/">OTEZ Racing</Link>
           </h1>
         </div>
